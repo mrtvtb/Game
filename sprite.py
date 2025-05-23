@@ -35,14 +35,13 @@ class Player(GameSprite):
 class Enemy(GameSprite):
     def update(self):
         if self.rect.x <= 440:
-            self.direction = "rigth"
+            direction = "rigth"
 
-        if self.direction == "rigth":
+        if direction == "rigth":
             self.rect.x += self.speed
 
         if self.rect.x >= 600:
-            self.direction = "left"
+            self.direction = 'left'
 
-
-        if self.direction == "left":
+        if self.direction == 'left':
             self.rect.x -= self.speed

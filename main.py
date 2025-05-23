@@ -13,8 +13,8 @@ mixer.init()
 mixer.music.load('Labirint/jungles.ogg')
 mixer.music.play()
 
-Hero = GameSprite('Labirint/hero.png', 50, 50, 5)
-Cyborg = GameSprite('Labirint/cyborg.png', 450, 250, 0)
+Hero = Player('Labirint/hero.png', 50, 50, 5)
+Cyborg = Enemy('Labirint/cyborg.png', 450, 250, 5)
 Gold = GameSprite('Labirint/treasure.png', 550, 400, 0)
 
 
@@ -28,7 +28,10 @@ while running:
             running = False
     window.blit(background,(0, 0))
 
+    Hero.update()
     Hero.reset(window)
+
+    Cyborg.update()
     Cyborg.reset(window)
     Gold.reset(window)
     display.update()
