@@ -34,6 +34,7 @@ class Player(GameSprite):
 
 class Enemy(GameSprite):
     def update(self):
+        
         if self.rect.x <= 440:
             direction = "rigth"
 

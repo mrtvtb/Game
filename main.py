@@ -33,6 +33,7 @@ while running:
 
     Cyborg.update()
     Cyborg.reset(window)
+    
     Gold.reset(window)
     display.update()
     clock.tick(FPS)
